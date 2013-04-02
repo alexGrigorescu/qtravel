@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /reservation.index.html
+Disallow: /reservation.thanks.html
+Disallow: /mymain.feedback.html

@@ -1,0 +1,668 @@
+@charset "utf-8";
+/* CSS Document */
+/* Copyright kusasa*/
+/*=============================
+	colors used:
+	-------------
+	#00c491 -> turqoise [buttons background]
+	#0bc091 -> slightly darker turqoise [links]
+	#b93b51 -> dark red [other buttons]
+	#e22848 -> dark red [links from grey boxes]
+==============================*/
+
+/*==================== resets*/
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video{
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+body{
+    line-height:1;
+}
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section{ 
+	display:block;
+}
+nav ul{
+    list-style:none;
+}
+blockquote, q{
+    quotes:none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after{
+    content:'';
+    content:none;
+}
+a{
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+/* change colours to suit your needs */
+ins{
+    text-decoration:none;
+}
+/* change colours to suit your needs */
+mark{
+    font-style:italic;
+    font-weight:bold;
+}
+del{
+    text-decoration: line-through;
+}
+abbr[title], dfn[title]{
+    cursor:help;
+}
+table{
+    border-collapse:collapse;
+    border-spacing:0;
+}
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    margin:1em 0;
+    padding:0;
+}
+input, select{
+    vertical-align:middle;
+}
+ul, ul li{
+	list-style:none;
+}
+/* END resets ================*/
+
+/*================ clearfix */
+.clearfix:after {
+	visibility:hidden;
+	display:block;
+	font-size:0;
+	content:" ";
+	clear:both;
+	height:0;
+	}
+* html .clearfix             { _zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+/* END clearfix ============= */
+
+.clear, .space, .xl-space, .xxl-space{
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+.space{
+	height: 10px;
+}
+.xl-space{
+	height:20px;
+}
+.xxl-space{
+	height:45px;
+}
+.center{
+	text-align:center;
+}
+a{
+	text-decoration:underline;
+	color:#0bc091;
+}
+a:hover{
+	color:#000;
+}
+.float-left{
+	float:left;
+}
+.float-right{
+	float:right;
+}
+a.bt-style1, a.bt-style2{	
+	color:#fff;
+	display:block;
+	float:left;
+	text-transform:uppercase;	
+	font-weight:bold;
+	text-align:center;	
+	text-decoration:none;
+}
+a.bt-style1{
+	background:#00c491;
+	font-size:16px;
+	padding:7px 20px;
+}
+a.bt-style2{
+	background:#b93b51;
+	font-size:14px;
+	padding:7px 15px;
+}
+a.bt-style1:hover, a.bt-style2:hover{
+	background:#000;
+}
+.sep1{
+	float:left;
+	background:#ddd;
+	width:7px;
+	font-size:0;
+	height:215px;
+}
+.sep2{
+	float:left;
+	padding-right:10px;
+}
+.padding-l18{
+	padding-left:18px;
+}
+/* ======== END GENERAL STUFF */
+body{
+	font:normal 13px Arial;
+	color:#222;
+}
+header{
+	padding:22px 0 35px;
+}
+.inner{
+	width:960px;
+	margin:auto;
+}
+header .logo img{
+	vertical-align:top;
+}
+header .logo .float-right{
+	padding:22px 0 0;
+	font-size:19px;
+	color:#000;
+	white-space:nowrap;
+}
+header nav{
+	background:#000;
+	padding:17px 0 0;
+	margin:22px 0 0;
+}
+header nav ul li{
+	float:left;
+	position:relative;
+	height:59px;
+}
+header nav a{
+	display:block;
+	width:125px;
+	height:59px;
+	padding:0 0 0 10px;
+	text-decoration:none;
+	color:#ddd;
+	font-size:15px;
+	background:url(../images/menu-bg.gif) no-repeat left top;
+}
+header nav a span{
+	display:block;
+	font-size:11px;
+	color:#809690;
+	cursor:pointer;
+}
+header nav a.selected, nav a:hover, header nav ul li:hover a{
+	color:#37e5b8;
+	background-position:0 -100px;
+}
+header nav a.selected span, nav a:hover span{
+	color:#76a397;
+}
+header nav ul li ul{
+	display:none;
+	position:absolute;
+	background:url(../images/slider-nav-bg.png) repeat;
+	z-index:1000;
+	width:180px;
+	padding:10px 5px;	
+}
+header nav ul li ul li{
+	float:none;
+	display:block;
+	padding:0 0 10px;
+	height:auto;
+}
+header nav ul li ul li a, header nav ul li:hover ul li a{
+	background:none;
+	height:auto;
+	width:auto;
+	font-size:12px;
+	padding:5px 7px;
+	color:#fff;
+	background:none;
+	font-weight:normal;
+}
+header nav ul li ul li a:hover, header nav ul li:hover ul li a:hover{
+	background-color:#06211A;
+	color:#37E5B8;
+}
+header nav ul li:hover ul{
+	display:block;
+}
+#container{
+	margin-bottom:35px;
+	position:relative;
+}
+.sub-page{
+	padding-top:15px;
+}
+.breadcrumb{
+	position:absolute;
+	left:0;
+	top:-20px;
+}
+.breadcrumb ul li{
+	display:inline;
+}
+.breadcrumb a{
+	text-decoration:none;
+}
+.breadcrumb li.current a{
+	cursor:default;
+	color:#444;
+}
+h1{
+	font-size:39px;
+	font-weight:bold;
+	color:#000;
+	line-height:39px;
+	margin:0 0 20px;
+}
+h2{
+	font-size:20px;
+	font-weight:normal;
+	color:#000;
+	margin:0 0 12px;
+}
+.sub-page h1{
+	font-size:27px;
+	font-weight:normal;
+	line-height:normal;
+}
+.sub-page h2{
+	font-size:20px;
+	border-bottom:1px solid #000;
+	padding:0 0 3px;
+	line-height:normal;
+	margin:15px 0 10px;
+}
+.sub-page h3{
+	font-size:17px;
+	font-weight:bold;
+	color:#000;
+	margin:7px 0;
+}
+.welcome{
+	width:265px;
+	font-size:14px;
+	line-height:21px;
+	height:378px;
+	position:relative;
+}
+.welcome p{
+	padding:0 0 20px;
+}
+.welcome a.bt-style1{
+	width:265px;
+	padding:7px 0;
+	float:none;
+	position:absolute;
+	bottom:0;
+}
+.box, .inner-box{
+	background:#eee;
+	padding:0 0 15px;	
+}
+.box .item{
+	width:275px;
+	height:195px;
+	padding:20px 20px 0;
+	float:left;
+	position:relative;	
+}
+.box .item a{
+	color:#e22848;
+}
+.box .item a:hover{
+	color:#000;
+}
+.box .item a.bt-style2{
+	width:200px;
+	float:none;
+	position:absolute;
+	bottom:5px;
+	left:55px;
+	padding:7px 0;
+	color:#fff;
+}
+.box .item p{
+	padding:0 0 10px;
+	line-height:17px;
+}
+.box .item ul li{
+	padding:0 0 7px 17px;
+	background:url(../images/arrow1.gif) no-repeat left 3px;
+}
+.box .item .icon{
+	position:absolute;
+	right:0;
+	top:0;
+	background:url(../images/sprite-gif.gif) no-repeat left top;
+	width:53px;
+	height:56px;
+}
+.box .item .cup{
+	background-position:right -57px;
+}
+.box .item .service{
+	background-position:right -114px;
+}
+.inner-box{
+	padding:15px 15px 20px;
+}
+.col-style1{
+	width:254px;
+}
+.col-style2{
+	width:665px;
+	line-height:19px;
+}
+.inner-box h5{
+	font-size:20px;
+	font-weight:normal;
+	color:#000;
+	padding-bottom:15px;
+}
+.inner-box ul li{
+	padding:0 0 10px 18px;
+	background:url(../images/arrow2.gif) no-repeat left 4px;
+}
+.inner-box ul li a{
+	color:#000;
+}
+.inner-box ul li a:hover, .inner-box ul li a.selected{
+	color:#0bc091;
+}
+.related-box ul li{
+	background:url(../images/arrow1.gif) no-repeat left 4px;
+}
+.related-box ul li a:hover, .related-box a{
+	color:#e22848;
+}
+.related-box ul li a{
+	text-decoration:underline;
+}
+.inner-box ul ul{
+	padding:7px 0 0 25px;
+}
+.inner-box ul ul li{
+	background:none;
+	padding:0 0 7px;
+}
+.inner-box ul ul li a{
+	text-decoration:none;
+}
+.col-style2 p{
+	padding:0 0 15px;	
+}
+footer{
+	background:#000;
+	padding:20px 0;
+	font-size:12px;
+	color:#809690;
+}
+footer a{
+	color:#c3d6d1;
+}
+footer a:hover{
+	color:#fff;
+}
+footer ul li{
+	padding:0 0 7px;
+}
+footer .float-left{
+	width:297px;
+}
+footer ul.double li{
+	width:110px;
+	float:left;
+}
+footer h5{
+	color:#809690;
+	font-size:16px;
+	font-weight:normal;
+	margin:0 0 15px;
+}
+footer .float-right{
+	width:365px;
+}
+footer .bt-style1{
+	background-color:#059973;
+	font-size:13px;
+	width:175px;
+	padding:7px 0;
+}
+footer .bt-style1:hover{
+	background-color:#b93b51;
+}
+footer .float-right .float-left, footer .float-right .float-right{
+	width:45%;
+	height:auto;
+	line-height:17px;
+}
+footer .float-right .float-right{
+	padding-top:30px;
+}
+footer .float-right .float-right p{
+	padding-bottom:5px;
+}
+.copy{
+	color:#444;
+	padding:10px 0 25px;
+}
+.copy img{
+	vertical-align:bottom;
+}
+
+/*
+	AnythingSlider v1.7+ Default (base) theme
+	By Chris Coyier: http://css-tricks.com
+	with major improvements by Doug Neiner: http://pixelgraphics.us/
+	based on work by Remy Sharp: http://jqueryfordesigners.com/
+*/
+.slider{
+	height:378px;
+	overflow:hidden;
+}
+#slider {
+	width:665px;
+	height:378px;
+	list-style: none;
+}
+.anythingBase { max-width: 32766px; }
+div.anythingSlider.activeSlider .anythingControls .thumbNav{
+	height:43px;
+	padding:10px 0 0 70px;
+}
+div.anythingSlider.activeSlider .anythingControls .thumbNav a{
+	color:#69968a;
+	font:normal 13px Arial;
+	float:left;
+	width:164px;
+	text-align:left;
+	padding:0 20px 0 0;
+	margin:0;	
+}
+div.anythingSlider.activeSlider .anythingControls .thumbNav a span{
+	display:block;
+}
+div.anythingSlider.activeSlider .anythingControls ul a.cur, div.anythingSlider.activeSlider .anythingControls ul a {
+	color:#fff;
+	text-align:left;
+}
+div.anythingSlider {
+	display: block;
+	margin: 0 auto;
+	overflow: visible !important; /* needed for Opera and Safari */
+	position: relative;
+}
+div.anythingSlider .anythingWindow {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.anythingBase {
+	background: transparent;
+	list-style: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+}
+.anythingBase .panel {
+	background: transparent;
+	display: block;
+	overflow: hidden;
+	float: left;
+	padding: 0;
+	margin: 0;
+}
+div.anythingSlider .arrow {	
+	position: absolute;
+	display: block;
+	bottom:7px;
+	z-index:30;
+}
+div.anythingSlider .arrow a {
+	background: url(../images/slider-nav.png) no-repeat;
+	display:block;
+	font-size:0;
+	width:18px;
+	height:36px;
+}
+div.anythingSlider .arrow a span { display: block; text-indent: -9999px; }
+div.anythingSlider .back{
+	left:10px;
+}
+div.anythingSlider .back a:hover, div.anythingSlider .back a.hover{ 
+	background-position: left -36px; 
+}
+div.anythingSlider .back.disabled { display: none; } /* disabled arrows, hide or reduce opacity: opacity: .5; filter: alpha(opacity=50); */
+div.anythingSlider .forward{
+	right:10px; 
+}
+div.anythingSlider .forward a{
+	background-position: right top;
+}
+div.anythingSlider .forward a:hover, div.anythingSlider .forward a.hover{ 
+	background-position: right -36px;
+}
+div.anythingSlider .forward.disabled { display: none; } /* disabled arrows, hide or reduce opacity: opacity: .5; filter: alpha(opacity=50); */
+/* Navigation Links */
+div.anythingSlider .anythingControls{ 
+	outline: 0; 
+	display: none; 
+	position:absolute;
+	bottom:0;
+	width:665px;
+	height:53px;
+	background:url(../images/slider-nav-bg.png) repeat;
+	z-index:20;
+}
+div.anythingSlider .anythingControls ul { margin: 0; padding: 0; float: left; }
+div.anythingSlider .anythingControls ul li { display: inline; }
+div.anythingSlider .anythingControls ul a {
+	font: 11px/18px Georgia, Serif;
+	display: inline-block;
+	text-decoration: none;
+	padding: 2px 8px;
+	height: 18px;
+	margin: 0 5px 0 0;
+	background-image: url(../images/default.png);
+	background-position: center -288px ;
+	background-repeat: repeat-x;
+	text-align: center;
+	outline: 0;
+}
+div.anythingSlider .anythingControls ul a:hover {
+	background-image: none;
+}
+/* Navigation size window */
+div.anythingSlider .anythingControls .anythingNavWindow { overflow: hidden; float: left; }
+/* slider autoplay right-to-left, reverse order of nav links to look better */
+div.anythingSlider.rtl .anythingControls ul a { float: right; } /* reverse order of nav links */
+div.anythingSlider.rtl .anythingControls ul { float: left; }    /* move nav link group to left */
+div.anythingSlider.rtl .anythingWindow {
+	direction: ltr;
+	unicode-bidi: bidi-override;
+}
+/* probably not necessary, but added just in case */
+div.anythingSlider, div.anythingSlider .anythingWindow, div.anythingSlider .anythingControls ul a, div.anythingSlider .arrow a, div.anythingSlider .start-stop{
+	transition-duration: 0;
+	-o-transition-duration: 0;
+	-moz-transition-duration: 0;
+	-webkit-transition-duration: 0;
+}
+/* expand image */
+#slider img           { width: 100%; height: 100%; position: relative; }
+#slider .panel        { position: relative; }
+
+/* position caption close button */
+.caption-top .close,
+.caption-right .close,
+.caption-bottom .close,
+.caption-left .close   { font-size: 80%; cursor: pointer; float: right; display: inline-block; }
+
+/* captions */
+/* set to position: relative here in case javascript is disabled, script sets captions to position: absolute */
+#slider .caption-bottom{
+	background:url(../images/caption-bg.png) repeat;
+	color: #fff;
+	padding: 10px;
+	margin: 0;
+	position: absolute;
+	bottom:0;
+	width:200px;
+	height:50px;
+	line-height:17px;
+	z-index: 10;
+}
+#slider .caption-bottom a{
+	color:#fff;
+}
+.one{
+	left:20px;
+}
+.two{
+	left:204px;
+}
+.three{
+	left:388px;
+}

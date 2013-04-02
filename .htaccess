@@ -1,0 +1,51 @@
+RewriteEngine on
+Options +FollowSymlinks
+RewriteBase /
+php_flag magic_quotes_gpc off
+
+RewriteCond %{HTTP_HOST} !^(www|www1)\.
+RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
+
+############# htaccess for oferta-vacanta-zend ###################
+
+RewriteCond %{HTTP_HOST} oferta-vacanta
+RewriteCond %{REQUEST_URI} !/admin.php
+
+RewriteBase /systems/oferta-vacanta-zend/public/
+
+RewriteRule ^(\d+\/)?css/(.*)$ /systems/oferta-vacanta-zend/public/css/$2 [L]
+RewriteRule ^(\d+\/)?js/(.*)$ /systems/oferta-vacanta-zend/public/js/$2 [L]
+RewriteRule ^(\d+\/)?images/(.*)$ /systems/oferta-vacanta-zend/public/images/$2 [L]
+RewriteRule ^.*$ index.php [QSA]
+
+############# end htaccess for oferta-vacanta-zend ###################
+
+RewriteRule ^sitemap.xml index.php?action=sitemap-index  [QSA]
+RewriteRule ^style.css index.php?action=main-style  [QSA]
+RewriteRule ^javascript.js index.php?action=main-javascript  [QSA]
+RewriteRule ^news\.([a-z0-9\_\-]*)\.html index.php?action=news-details&code=$1  [QSA]
+RewriteRule ^news\.([a-z0-9\_\-]*)\.([0-9]*)\.html index.php?action=news-index&param1=$1&page=$2  [QSA]
+RewriteRule ^page\.([a-z0-9\_\-]*)\.html index.php?action=page-index&code=$1  [QSA]
+
+
+RewriteRule ^([a-z0-9\_\-]*)\.([a-z0-9\_\-]*)\.html?(.*) index.php?action=$1-$2$3  [QSA]
+
+#RewriteRule ^([a-z0-9\_\-]*)\.html index.php?subdomains[0]=$1  [QSA]
+RewriteRule ^([a-z0-9\_\-]*)\.html $1/  [R=301,L]
+
+#RewriteRule ^([a-z0-9\_\-]*)\/([a-z0-9\_\-]*)\.html index.php?subdomains[0]=$2&subdomains[1]=$1  [QSA]
+RewriteRule ^([a-z0-9\_\-]*)\/([a-z0-9\_\-]*)\.html $1/$2/  [R=301,L]
+
+RewriteRule ^([a-z0-9\_\-]*)\/([a-z0-9\_\-]*)\/([a-z0-9\_\-]*)\.html index.php?subdomains[0]=$3&subdomains[1]=$2&subdomains[2]=$1  [QSA]
+
+
+RewriteRule ^([a-z0-9\_\-]*)/$ index.php?subdomains[0]=$1  [QSA]
+RewriteRule ^([a-z0-9\_\-]*)\/([a-z0-9\_\-]*)/$ index.php?subdomains[0]=$2&subdomains[1]=$1  [QSA]
+RewriteRule ^([a-z0-9\_\-]*)\/([a-z0-9\_\-]*)\/([a-z0-9\_\-]*)/$ index.php?subdomains[0]=$3&subdomains[1]=$2&subdomains[2]=$1  [QSA]
+
+
+RewriteRule ^test.php test.php  [QSA]
+RewriteRule ^contract([a-z0-9\_\-]*)\-voucher-electronic\.pdf admin.php?action=contracts-ve&code=contract$1  [QSA]
+RewriteRule ^contract([a-z0-9\_\-]*)\-voucher-print\.pdf admin.php?action=contracts-vp&code=contract$1  [QSA]
+RewriteRule ^contract([a-z0-9\_\-]*)\.rtf admin.php?action=contracts-doc&code=contract$1  [QSA]
+ErrorDocument 404 /main.invalid.html

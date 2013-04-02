@@ -1,0 +1,212 @@
+<?php echo $this->doctype(); ?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Kusasa</title>
+        <script type="text/javascript">
+            var BASE_URL = '<?php echo $this->baseUrl(); ?>';
+        </script>
+		<?php
+            $this->headLink()->appendStylesheet($this->baseUrl('/css/jquery.fancybox-1.3.4.css'));
+            $this->headLink()->appendStylesheet($this->baseUrl('/css/style.css'));
+
+			echo $this->headLink();
+
+            $this->headScript()->appendFile("http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js");
+            $this->headScript()->appendFile("http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js");
+			$this->headScript()->appendFile($this->baseUrl('/js/jquery.anythingslider.min.js'));
+            $this->headScript()->appendFile($this->baseUrl('/js/jquery.anythingslider.fx.min.js'));
+            $this->headScript()->appendFile($this->baseUrl('/js/jquery.fancybox-1.3.4.pack.js'));
+            $this->headScript()->appendFile($this->baseUrl('/js/scripts.js'));
+			echo $this->headScript();
+		?>
+        <!--[if IE]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+	</head>
+
+	<body>
+
+        <header>
+            <div class="inner logo clearfix">
+                <a class="float-left" href="<?php echo $this->url(array('module' => 'default', 'controller' => 'index', 'action' => 'index'));?>"><img src="<?= $this->baseUrl(); ?>/images/kusasa-development-facilitation.gif" alt="kusasa development facilitation company" /></a>
+                <div class="float-right">
+                    Project Management and Development Facilitation Company
+                </div><!--img class="float-right" src="<?= $this->baseUrl(); ?>/images/project-management-text.gif" alt="project management and development facilitation company" /-->
+            </div>
+
+            <nav>
+                <ul class="inner clearfix">
+                    <li>
+                        <a class="selected" href="<?php echo $this->url(array('module' => 'default', 'controller' => 'index', 'action' => 'index'));?>"> <!-- the current page must have the class selected added to it -->
+                            Home
+                            <span>see the main page</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="<?php echo $this->url(array('module' => 'default', 'controller' => 'page', 'action' => 'view', 'page_id' => 7));?>">
+                            About Kusasa
+                            <span>who we are</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="<?php echo $this->url(array('module' => 'default', 'controller' => 'page', 'action' => 'view', 'page_id' => 10));?>">
+                            Services
+                            <span>what we offer you</span>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="<?php echo $this->url(array('module' => 'default', 'controller' => 'page', 'action' => 'view', 'page_id' => 1));?>">
+                                    Development facilitation
+                                </a>
+                            </li>
+                            <li>
+                                <a href="<?php echo $this->url(array('module' => 'default', 'controller' => 'page', 'action' => 'view', 'page_id' => 2));?>">
+                                    Project & Grant Funding
+                                </a>
+                            </li>
+                            <li>
+                                <a href="<?php echo $this->url(array('module' => 'default', 'controller' => 'page', 'action' => 'view', 'page_id' => 3));?>">
+                                    Project Feasibilities
+                                </a>
+                            </li>
+                            <li>
+                                <a href="<?php echo $this->url(array('module' => 'default', 'controller' => 'page', 'action' => 'view', 'page_id' => 4));?>">
+                                    Design Management
+                                </a>
+                            </li>
+                            <li>
+                                <a href="<?php echo $this->url(array('module' => 'default', 'controller' => 'page', 'action' => 'view', 'page_id' => 5));?>">
+                                    Project Management
+                                </a>
+                            </li>
+                            <li>
+                                <a href="<?php echo $this->url(array('module' => 'default', 'controller' => 'page', 'action' => 'view', 'page_id' => 6));?>">
+                                    Site Management
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="<?php echo $this->url(array('module' => 'default', 'controller' => 'project', 'action' => 'list'));?>">
+                            Our projects
+                            <span>discover our work</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" style='width: 140px'>
+                            Exclusive Products
+                            <span>featured projects</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="<?php echo $this->url(array('module' => 'default', 'controller' => 'page', 'action' => 'view', 'page_id' => 8));?>">
+                            Meet the Team
+                            <span>meet our team</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="<?php echo $this->url(array('module' => 'default', 'controller' => 'page', 'action' => 'view', 'page_id' => 9));?>">
+                            Contact us
+                            <span>let’s get in touch</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav> <!-- END nav -->
+        </header>
+        <!-- ============ END header ============= -->
+
+
+        <?php echo $this->layout()->content; ?>
+
+
+        <footer>
+            <div class="inner clearfix">
+
+                <div class="float-left">
+                    <div class="sep2"><img src="<?= $this->baseUrl(); ?>/images/sep2.gif" alt="" /></div>
+
+                    <h5>Browse the site</h5>
+                    <ul class="double clearfix">
+                        <li>
+                            <a href="./">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">About Kusasa</a>
+                        </li>
+                        <li>
+                            <a href="#">Services</a>
+                        </li>
+                        <li>
+                            <a href="#">Our projects</a>
+                        </li>
+                        <li>
+                            <a href="#">Clients</a>
+                        </li>
+                        <li>
+                            <a href="#">Sectors</a>
+                        </li>
+                        <li>
+                            <a href="#">Locations</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact us</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="float-left">
+                    <div class="sep2"><img src="<?= $this->baseUrl(); ?>/images/sep2.gif" alt="" /></div>
+
+                    <h5>Browse our services</h5>
+                    <ul>
+                        <li>
+                            <a href="#">Finding sites for development</a>
+                        </li>
+                        <li>
+                            <a href="#">Feasibilities</a>
+                        </li>
+                        <li>
+                            <a href="#">Design Management</a>
+                        </li>
+                        <li>
+                            <a href="#">Construction Management</a>
+                        </li>
+                        <li>
+                            <a href="#">Financial Management</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="float-right clearfix">
+                    <div class="sep2"><img src="<?= $this->baseUrl(); ?>/images/sep2.gif" alt="" /></div>
+
+                    <div class="float-left">
+                        <h5>Get in touch with us</h5>
+                        <img src="<?= $this->baseUrl(); ?>/images/contact.gif" alt="" />
+                        <div class="space"></div>
+                        <p>Tel: +44 (0)1202 853 301</p>
+                        <p>Email: <a href="mailto:">info@kusasa.eu</a></p>
+                    </div>
+
+                    <div class="float-right">
+                        <p>Kusasa Limited, Discovery Court Business centre </p>
+                        <p>551-553 Walisdown Road</p>
+                        <p>Poole, BH12 5AG</p>
+
+                        <div class="xl-space"></div>
+                        <a class="bt-style1" href="<?php echo $this->url(array('module' => 'default', 'controller' => 'page', 'action' => 'view', 'page_id' => 9));?>">
+                            Contact us
+                        </a>
+                    </div>
+                </div>
+
+            </div> <!-- END class inner -->
+        </footer>
+        <!-- ============ END footer ============= -->
+        <div class="copy inner">
+            &copy; 2013 <img src="<?= $this->baseUrl(); ?>/images/kusasa-small.gif" alt="KUSASA" />. All Rights Reserved.
+        </div>
+
+    </body>
+</html>

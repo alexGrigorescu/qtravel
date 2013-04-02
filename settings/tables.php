@@ -1,0 +1,35 @@
+<?
+	define('TBL_'.'ACCOMMODATIONS', 'accommodations');
+	define('TBL_'.'ACCOMMODATION_TYPES', 'accommodation_types');
+	define('TBL_'.'BUSSES', 'busses');
+	define('TBL_'.'CIRCUITS', 'circuits');
+	define('TBL_'.'CONTINENTS', 'continents');
+	define('TBL_'.'CONTRACTS', 'contracts');
+	define('TBL_'.'COUNTRIES', 'countries');
+	define('TBL_'.'CURRENCIES', 'currencies');
+	define('TBL_'.'DOMAINS', 'domains');
+	define('TBL_'.'FEEDS', 'feeds');
+	define('TBL_'.'FLIGHTS', 'flights');
+	define('TBL_'.'FLIGHT_OPERATORS', 'flight_operators');
+	define('TBL_'.'FLIGHT_TYPES', 'flight_types');
+	define('TBL_'.'LOCATIONS', 'locations');
+	define('TBL_'.'NEWS', 'news');
+	define('TBL_'.'NEWS_TAGS', 'news_tags');
+	define('TBL_'.'PAGES', 'pages');
+	define('TBL_'.'PRICES', 'prices');
+	define('TBL_'.'REGIONS', 'regions');
+	define('TBL_'.'SESSIONS', 'sessions');
+	define('TBL_'.'SEARCH', 'search');
+	define('TBL_'.'SITEMAP', 'sitemap');
+	define('TBL_'.'SPECIALS', 'specials');
+	define('TBL_'.'SPECIAL_OFFERS', 'special_offers');
+	define('TBL_'.'TRANSPORT_TYPES', 'transport_types');
+	define('TBL_'.'TAGS', 'tags');
+	define('TBL_'.'USERS', 'users');
+	define('TBL_'.'VACATIONS', 'vacations');
+	define('TBL_'.'CURRENCIES_VALUES', 'currencies_values');
+	define('TBL_'.'VACANCY_OFFER_ADMIN', 'vacancy_offer_admin');
+	define('TBL_'.'VACANCY_OFFER_ADVERTISING', 'vacancy_offer_advertising');
+	define('TBL_'.'ACCOMMODATIONS_PRICE_IMAGES', 'accommodations_price_images');
+	define('TBL_'.'META', 'meta');
+?>

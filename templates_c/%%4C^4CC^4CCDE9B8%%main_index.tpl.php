@@ -1,0 +1,6 @@
+<?php /* Smarty version 2.6.18, created on 2013-03-03 10:50:19
+         compiled from D:/wamp/www/qtravel/public_html/templates/default/main_index.tpl */ ?>
+<p class="text">Nam aliquet urna sed nisl. Duis fermentum. Etiam tempus, lacus quis mollis laoreet, turpis turpis commodo lectus, et suscipit dui erat at odio. Cras vitae neque tincidunt lorem mollis interdum.</p>
+<p class="text">Nam aliquet urna sed nisl. Duis fermentum. Etiam tempus, lacus quis mollis laoreet, turpis turpis commodo lectus, et suscipit dui erat at odio. Cras vitae neque tincidunt lorem mollis interdum.</p>
+<p class="text">Nam aliquet urna sed nisl. Duis fermentum. Etiam tempus, lacus quis mollis laoreet, turpis turpis commodo lectus, et suscipit dui erat at odio. Cras vitae neque tincidunt lorem mollis interdum.</p>
+<p class="text">Nam aliquet urna sed nisl. Duis fermentum. Etiam tempus, lacus quis mollis laoreet, turpis turpis commodo lectus, et suscipit dui erat at odio. Cras vitae neque tincidunt lorem mollis interdum.</p>

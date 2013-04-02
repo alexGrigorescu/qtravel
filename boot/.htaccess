@@ -1,0 +1,6 @@
+RewriteEngine on
+Options +FollowSymlinks
+RewriteBase /
+
+RewriteRule ^task\.([a-z0-9\_\-]*)\.html index.php?action=task-$1  [QSA]
+RewriteRule ^task\.([a-z0-9\_\-]*)\.html\?(.*) index.php?action=task-$1&$2  [QSA]

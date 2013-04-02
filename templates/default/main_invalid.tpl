@@ -1,0 +1,1 @@
+<b>{tr key='main_invalid' class='main'}</b>

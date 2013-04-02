@@ -1,0 +1,1 @@
+{tr key='register_thanks_message'}
